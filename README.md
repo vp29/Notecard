@@ -10,4 +10,5 @@ Potentially Useful Links:
 * http://www.aclweb.org/anthology/C12-2112
 * https://www.uleth.ca/dspace/bitstream/handle/10133/3250/ali,%20husam.pdf?sequence=1
 * http://www.aclweb.org/anthology/W15-0618
-* http://stackoverflow.com/questions/6815270/generating-questions-from-text-nlp
+* http://groups.csail.mit.edu/sls/publications/2009/SIGSLaTE09_Xu.pdf
+* http://www.iro.umontreal.ca/~felipe/TALN2010/Xml/Papers/all/taln2010_submission_172.pdf
