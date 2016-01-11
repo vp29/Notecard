@@ -1,0 +1,6 @@
+*.pyc
+.idea/workspace.xml
+.idea/Notecard.iml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
