@@ -12,3 +12,7 @@ Potentially Useful Links:
 * http://www.aclweb.org/anthology/W15-0618
 * http://groups.csail.mit.edu/sls/publications/2009/SIGSLaTE09_Xu.pdf
 * http://www.iro.umontreal.ca/~felipe/TALN2010/Xml/Papers/all/taln2010_submission_172.pdf
+
+
+# Other Projects to draw upon
+* http://nlp.stanford.edu/projects/glove/
