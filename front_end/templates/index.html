@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+      
+	  <script src="http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js"></script>
+	  
+<link rel="stylesheet" href="http://assets.annotateit.org/annotator/v1.2.5/annotator.min.css">
+  </head>
+<body>
+	
+    <h2>Story #1</h2>
+    <div id="story1">
+        <p class="sidenotes">stuff #1</p>
+        <p class="sidenotes">more stuff #1</p>
+    </div>
+    <hr />
+    <h2>Story #2</h2>
+    <div id="story2">
+        <p class="sidenotes">stuff #2</p>
+        <p class="sidenotes">more stuff #2</p>
+        <p class="sidenotes">more and more stuff</p>
+    </div>
+    <hr />
+    <script type="text/javascript">
+
+    var annotator_obj = $('.sidenotes').annotator();
+	
+
+
+Annotator.Plugin.StoreLogger = function (element) {
+  return {
+    pluginInit: function () {
+      this.annotator
+          .subscribe("annotationCreated", function (annotation) {
+            console.info("The annotation: %o has just been created!", annotation)
+			console.info(annotation.quote) //text that has been annotatied
+			console.info(annotation.text) //annotation		
+          })
+          .subscribe("annotationUpdated", function (annotation) {
+            console.info("The annotation: %o has just been updated!", annotation)
+          })
+          .subscribe("annotationDeleted", function (annotation) {
+            console.info("The annotation: %o has just been deleted!", annotation)
+          })
+		  .subscribe("annotationEditorShown", function (viewer, annotation) {
+			viewer.fields[0].text = 'shit'
+            console.info("viewer", viewer.fields[0].element);
+          });
+    }
+  }
+};
+
+annotator_obj.annotator('addPlugin', 'StoreLogger' /*, any other options */)
+
+
+    </script>
+   </body>
+</html>
