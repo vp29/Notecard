@@ -44,14 +44,6 @@ if os.environ.get("heroku"):  # too lazy to get to work on mac
     cache = init_cacheify(app)
 
 
-if os.environ.get("heroku"):
-    DBURI = os.environ['DATABASE_URL']
-else: # we are running this bitch locally
-    DBURI = 'postgresql://postgres:boktai2@localhost:5433/postgres'
-
-
-
-
 SECRET_KEY = 'sldfjsf'
 
 DEBUG_var = True
